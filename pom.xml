@@ -11,146 +11,145 @@
 <packaging>pom</packaging>
 
 <dependencies>
-
-<dependency>
-    <groupId>org.slf4j</groupId>
-    <artifactId>slf4j-api</artifactId>
-    <version>${org.slf4j.version}</version>
-</dependency>
-<dependency>
-    <groupId>ch.qos.logback</groupId>
-    <artifactId>logback-classic</artifactId>
-    <version>${logback.version}</version>
-</dependency>
-<dependency>
-    <groupId>ch.qos.logback</groupId>
-    <artifactId>logback-core</artifactId>
-    <version>${logback.version}</version>
-</dependency>
-<dependency>
-    <groupId>org.slf4j</groupId>
-    <artifactId>jcl-over-slf4j</artifactId>
-    <version>${org.slf4j.version}</version>
-</dependency>
-
-
-<dependency>
-    <groupId>org.junit.jupiter</groupId>
-    <artifactId>junit-jupiter-engine</artifactId>
-    <version>${junit-jupiter.version}</version>
-    <scope>test</scope>
-</dependency>
-<dependency>
-    <groupId>org.junit.jupiter</groupId>
-    <artifactId>junit-jupiter-params</artifactId>
-    <version>${junit-jupiter.version}</version>
-    <scope>test</scope>
-</dependency>
-<dependency>
-    <groupId>org.junit.jupiter</groupId>
-    <artifactId>junit-jupiter-api</artifactId>
-    <version>${junit-jupiter.version}</version>
-    <scope>test</scope>
-</dependency>
-<dependency>
-    <groupId>org.junit.vintage</groupId>
-    <artifactId>junit-vintage-engine</artifactId>
-    <version>${junit-jupiter.version}</version>
-    <scope>test</scope>
-</dependency>
-<dependency>
-    <groupId>org.assertj</groupId>
-    <artifactId>assertj-core</artifactId>
-    <version>${assertj.version}</version>
-    <scope>test</scope>
-</dependency>
-<dependency>
-    <groupId>org.hamcrest</groupId>
-    <artifactId>hamcrest</artifactId>
-    <version>${hamcrest.version}</version>
-    <scope>test</scope>
-</dependency>
-<dependency>
-    <groupId>org.hamcrest</groupId>
-    <artifactId>hamcrest-all</artifactId>
-    <version>${hamcrest-all.version}</version>
-    <scope>test</scope>
-</dependency>
-<dependency>
-    <groupId>org.mockito</groupId>
-    <artifactId>mockito-core</artifactId>
-    <version>${mockito.version}</version>
-    <scope>test</scope>
-</dependency>
-<dependency>
-    <groupId>org.apache.maven.surefire</groupId>
-    <artifactId>surefire-logger-api</artifactId>
-    <version>${maven-surefire-plugin.version}</version>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${org.slf4j.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>${logback.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-core</artifactId>
+        <version>${logback.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>jcl-over-slf4j</artifactId>
+        <version>${org.slf4j.version}</version>
+    </dependency>
     
-    <scope>test</scope>
-    <optional>true</optional>
-</dependency>
+    
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>${junit-jupiter.version}</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-params</artifactId>
+        <version>${junit-jupiter.version}</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>${junit-jupiter.version}</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.vintage</groupId>
+        <artifactId>junit-vintage-engine</artifactId>
+        <version>${junit-jupiter.version}</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.assertj</groupId>
+        <artifactId>assertj-core</artifactId>
+        <version>${assertj.version}</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.hamcrest</groupId>
+        <artifactId>hamcrest</artifactId>
+        <version>${hamcrest.version}</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.hamcrest</groupId>
+        <artifactId>hamcrest-all</artifactId>
+        <version>${hamcrest-all.version}</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-core</artifactId>
+        <version>${mockito.version}</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.maven.surefire</groupId>
+        <artifactId>surefire-logger-api</artifactId>
+        <version>${maven-surefire-plugin.version}</version>
+        
+        <scope>test</scope>
+        <optional>true</optional>
+    </dependency>
 </dependencies>
 
 <build>
 <plugins>
     <plugin>
-	<groupId>org.codehaus.mojo</groupId>
-	<artifactId>exec-maven-plugin</artifactId>
-	<version>${exec-maven-plugin.version}</version>
-	<configuration>
-	    <executable>maven</executable>
-	</configuration>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>exec-maven-plugin</artifactId>
+    <version>${exec-maven-plugin.version}</version>
+    <configuration>
+        <executable>maven</executable>
+    </configuration>
     </plugin>
     <plugin>
-	<groupId>org.apache.maven.plugins</groupId>
-	<artifactId>maven-surefire-plugin</artifactId>
-	<version>${maven-surefire-plugin.version}</version>
-	<configuration>
-	    <forkCount>3</forkCount>
-	    <reuseForks>true</reuseForks>
-	    <excludes>
-		<exclude>**/*IntegrationTest.java</exclude>
-		<exclude>**/*IntTest.java</exclude>
-		<exclude>**/*LongRunningUnitTest.java</exclude>
-		<exclude>**/*ManualTest.java</exclude>
-		<exclude>**/JdbcTest.java</exclude>
-		<exclude>**/*LiveTest.java</exclude>
-	    </excludes>
-	</configuration>
-	<dependencies>
-	    <dependency>
-		<groupId>org.junit.jupiter</groupId>
-		<artifactId>junit-jupiter-engine</artifactId>
-		<version>${junit-jupiter.version}</version>
-	    </dependency>
-	    <dependency>
-		<groupId>org.junit.vintage</groupId>
-		<artifactId>junit-vintage-engine</artifactId>
-		<version>${junit-jupiter.version}</version>
-	    </dependency>
-	</dependencies>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>${maven-surefire-plugin.version}</version>
+    <configuration>
+        <forkCount>3</forkCount>
+        <reuseForks>true</reuseForks>
+        <excludes>
+        <exclude>**/*IntegrationTest.java</exclude>
+        <exclude>**/*IntTest.java</exclude>
+        <exclude>**/*LongRunningUnitTest.java</exclude>
+        <exclude>**/*ManualTest.java</exclude>
+        <exclude>**/JdbcTest.java</exclude>
+        <exclude>**/*LiveTest.java</exclude>
+        </excludes>
+    </configuration>
+    <dependencies>
+        <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>${junit-jupiter.version}</version>
+        </dependency>
+        <dependency>
+        <groupId>org.junit.vintage</groupId>
+        <artifactId>junit-vintage-engine</artifactId>
+        <version>${junit-jupiter.version}</version>
+        </dependency>
+    </dependencies>
     </plugin>
     <plugin>
-	<groupId>org.apache.maven.plugins</groupId>
-	<artifactId>maven-compiler-plugin</artifactId>
-	<version>${maven-compiler-plugin.version}</version>
-	<configuration>
-	    <source>${java.version}</source>
-	    <target>${java.version}</target>
-	</configuration>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>${maven-compiler-plugin.version}</version>
+    <configuration>
+        <source>${java.version}</source>
+        <target>${java.version}</target>
+    </configuration>
     </plugin>
-	<!--
+    <!--
     <plugin>
-	<groupId>org.apache.maven.plugins</groupId>
-	<artifactId>maven-pmd-plugin</artifactId>
-	<version>${maven-pmd-plugin.version}</version>
-	<dependencies>
-	    <dependency>
-		<groupId>org.baeldung.pmd</groupId>
-		<version>${custom-pmd.version}</version>
-	    </dependency>
-	</dependencies>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>${maven-pmd-plugin.version}</version>
+        <dependencies>
+            <dependency>
+                <groupId>org.baeldung.pmd</groupId>
+                <version>${custom-pmd.version}</version>
+            </dependency>
+        </dependencies>
                 <configuration>
                     <failurePriority>5</failurePriority>
                     <aggregate>false</aggregate>
@@ -176,7 +175,7 @@
                     </execution>
                 </executions>
             </plugin>
-	-->
+    -->
             <plugin>
                 <groupId>org.commonjava.maven.plugins</groupId>
                 <artifactId>directory-maven-plugin</artifactId>
@@ -198,7 +197,7 @@
                     </execution>
                 </executions>
             </plugin>
-		<!--
+        <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-install-plugin</artifactId>
@@ -234,6 +233,7 @@
                 <version>${gitflow-incremental-builder.version}</version>
             </extension>
         </extensions-->
+
         <pluginManagement>
             <plugins>
                 <!--This plugin's configuration is used to store Eclipse m2e settings
@@ -291,8 +291,14 @@
         </pluginManagement>
     </build>
 
-    <profiles>
+    <modules>
+        <module>parent-spring-5</module>
+        <module>app</module>
+    </modules>
 
+    <!-- Profile use was related to the disabled gitflow incremental build
+     extension that is not available anywhere in ThermoFisher JFrog -->
+    <profiles>
         <profile>
             <id>default-first</id>
             <build>
@@ -325,10 +331,6 @@
                 </plugins>
             </build>
 
-            <modules>
-                <module>parent-spring-5</module>
-                <module>app</module>
-            </modules>
             <!--modules>
                 <module>parent-boot-1</module>
                 <module>parent-boot-2</module>
@@ -549,7 +551,6 @@
             <id>default-second</id>
             <build>
                 <plugins>
-
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-surefire-plugin</artifactId>
@@ -574,7 +575,6 @@
                             </systemPropertyVariables>
                         </configuration>
                     </plugin>
-
                 </plugins>
             </build>
 
@@ -712,7 +712,6 @@
             <id>default-heavy</id>
             <build>
                 <plugins>
-
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-surefire-plugin</artifactId>
@@ -767,7 +766,6 @@
 
         <profile>
             <id>integration-lite-first</id>
-
             <build>
                 <plugins>
                     <plugin>
@@ -1010,7 +1008,6 @@
 
         <profile>
             <id>integration-lite-second</id>
-
             <build>
                 <plugins>
                     <plugin>
@@ -1166,7 +1163,6 @@
 
         <profile>
             <id>integration-heavy</id>
-
             <build>
                 <plugins>
                     <plugin>
@@ -1217,7 +1213,6 @@
 
         <profile>
             <id>live-all</id>
-
             <build>
                 <plugins>
                     <plugin>
@@ -1247,10 +1242,8 @@
 
         <profile>
             <id>default-jdk9-and-above</id>
-
             <build>
                 <plugins>
-
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-surefire-plugin</artifactId>
@@ -1284,12 +1277,6 @@
                  <module>core-java-modules/core-java-10</module>
                  <module>core-java-modules/core-java-11</module>
                  <module>core-java-modules/core-java-11-2</module>
-                 
-                 
-                 
-                 
-                 
-                 
                  <module>core-java-modules/core-java-collections-set</module>
                  <module>core-java-modules/core-java-collections-maps-4</module>
                  <module>core-java-modules/core-java-date-operations-1</module>
@@ -1324,7 +1311,6 @@
 
         <profile>
             <id>integration-jdk9-and-above</id>
-
             <build>
                 <plugins>
                     <plugin>
@@ -1353,11 +1339,6 @@
                 <module>core-java-modules/core-java-10</module>
                 <module>core-java-modules/core-java-11</module>
                 <module>core-java-modules/core-java-11-2</module>
-                
-                
-                
-                
-                
                 
                 <module>core-java-modules/core-java-collections-set</module>
                 <module>core-java-modules/core-java-collections-maps-4</module>
@@ -1418,12 +1399,8 @@
         <hamcrest-all.version>1.3</hamcrest-all.version>
         <mockito.version>4.4.0</mockito.version>
         <byte-buddy.version>1.11.20</byte-buddy.version>
-
-        
         <org.slf4j.version>1.7.32</org.slf4j.version>
         <logback.version>1.2.6</logback.version>
-
-        
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <exec-maven-plugin.version>3.0.0</exec-maven-plugin.version>
@@ -1457,5 +1434,4 @@
         <h2.version>1.4.200</h2.version>
         <guava.version>31.0.1-jre</guava.version>
     </properties>
-
 </project>
