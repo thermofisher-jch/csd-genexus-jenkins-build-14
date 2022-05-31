@@ -127,5 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-.project/
-.settings/
+
+# Eclipse IDE
+**/.classpath
+**/.project
+**/.settings/
+
