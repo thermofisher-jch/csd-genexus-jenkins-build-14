@@ -140,18 +140,17 @@
 	    <target>${java.version}</target>
 	</configuration>
     </plugin>
+	<!--
     <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
 	<artifactId>maven-pmd-plugin</artifactId>
 	<version>${maven-pmd-plugin.version}</version>
-	<!--
 	<dependencies>
 	    <dependency>
 		<groupId>org.baeldung.pmd</groupId>
 		<version>${custom-pmd.version}</version>
 	    </dependency>
 	</dependencies>
-	-->
                 <configuration>
                     <failurePriority>5</failurePriority>
                     <aggregate>false</aggregate>
@@ -177,6 +176,7 @@
                     </execution>
                 </executions>
             </plugin>
+	-->
             <plugin>
                 <groupId>org.commonjava.maven.plugins</groupId>
                 <artifactId>directory-maven-plugin</artifactId>
@@ -227,13 +227,13 @@
             </plugin>
         </plugins>
 
-        <extensions>
+        <!--extensions>
             <extension>
                 <groupId>com.vackosar.gitflowincrementalbuilder</groupId>
                 <artifactId>gitflow-incremental-builder</artifactId>
                 <version>${gitflow-incremental-builder.version}</version>
             </extension>
-        </extensions>
+        </extensions-->
         <pluginManagement>
             <plugins>
                 <!--This plugin's configuration is used to store Eclipse m2e settings
