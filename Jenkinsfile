@@ -23,6 +23,7 @@ pipeline {
 			}
 			steps {
 				echo "On Release"
+				echo env.BRANCH_NAME
 			}
 		}
 		stage('On CLI') {
