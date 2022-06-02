@@ -19,7 +19,7 @@ pipeline {
 		}
 		stage('On release') {
 			when {
-				branch 'release'
+				branch 'release-*'
 			}
 			steps {
 				echo "On Release"
