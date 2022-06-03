@@ -17,19 +17,27 @@ pipeline {
 				echo "On Main"
 			}
 		}
-		stage('On release') {
+		stage('On release 6.6.0') {
 			when {
-				branch 'release'
+				branch 'release6.6.0'
 			}
 			steps {
-				echo "On Release"
+				echo "On Release 6.6.0"
+			}
+		}
+		stage('On release 6.8.0') {
+			when {
+				branch 'release6.8.0'
+			}
+			steps {
+				echo "On Release 6.8.0"
 			}
 		}
 		stage('On CLI') {
 			steps {
 				sh '''
-					jf config show
-					jf rt ping
+					echo "jf config show"
+					echo "jf rt ping"
 				'''
 			}
 		}
